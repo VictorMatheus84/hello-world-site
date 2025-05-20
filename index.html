@@ -2,23 +2,56 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>Hello World!</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      background-color: #f5f5f5;
-      color: #333;
-      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      flex-direction: column;
+      text-align: center;
     }
     h1 {
-      font-size: 48px;
+      font-size: 4rem;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      font-size: 1.25rem;
+      margin: 1rem 0;
+      animation: fadeIn 3s ease;
+    }
+    a.button {
+      background-color: white;
+      color: #4e54c8;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      animation: fadeIn 4s ease;
+    }
+    a.button:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <h1>Hello World!</h1>
+  <p>Seja bem-vindo ao seu primeiro site com estilo 🎉</p>
+  <a href="#" class="button">Clique Aqui</a>
 </body>
 </html>
