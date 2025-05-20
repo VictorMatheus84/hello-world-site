@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World!</title>
+  <title>Bebidas Tropicais</title>
   <style>
     * {
       margin: 0;
@@ -10,48 +10,75 @@
       box-sizing: border-box;
     }
     body {
-      height: 100vh;
-      background: linear-gradient(135deg, #4e54c8, #8f94fb);
       font-family: 'Segoe UI', sans-serif;
-      color: white;
+      background: linear-gradient(to right, #fdfc47, #24fe41);
+      color: #333;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       text-align: center;
+      padding: 40px 20px;
     }
     h1 {
-      font-size: 4rem;
-      animation: fadeIn 2s ease;
+      font-size: 3rem;
+      color: #2e8b57;
+      margin-bottom: 10px;
     }
     p {
-      font-size: 1.25rem;
-      margin: 1rem 0;
-      animation: fadeIn 3s ease;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
     }
-    a.button {
-      background-color: white;
-      color: #4e54c8;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      animation: fadeIn 4s ease;
+    .bebidas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
     }
-    a.button:hover {
-      background-color: #f1f1f1;
-      transform: scale(1.05);
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #2e8b57;
+    }
+    .card p {
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <p>Seja bem-vindo ao seu primeiro site com estilo 🎉</p>
-  <a href="#" class="button">Clique Aqui</a>
+  <h1>Bebidas Tropicais</h1>
+  <p>Refresque seu dia com nossos sabores naturais 🍍🥭🥥</p>
+
+  <div class="bebidas">
+    <div class="card">
+      <img src="https://source.unsplash.com/200x150/?juice" alt="Suco natural">
+      <h3>Suco Detox</h3>
+      <p>Com abacaxi, gengibre e hortelã. 100% natural.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/200x150/?coconut-drink" alt="Água de coco">
+      <h3>Água de Coco</h3>
+      <p>Direto do coqueiro, sem conservantes.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/200x150/?smoothie" alt="Smoothie">
+      <h3>Smoothie Tropical</h3>
+      <p>Manga, banana e leite vegetal. Energia e sabor!</p>
+    </div>
+  </div>
 </body>
 </html>
